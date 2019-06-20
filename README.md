@@ -1,5 +1,10 @@
 # BuzzIn.live Custom Sound Player Userscript<img src='https://raw.githubusercontent.com/WilsontheWolf/BuzzIn.live-Custom-Sound-Player-Userscript/master/image.png' width="42"></img>
-BuzzIn.live Custom Sound Player for buzzer.
+BuzzIn.live Custom Sound Player for buzzer. Includes a soundboard!
+
+<audio controls>
+  <source src="https://www.myinstants.com//media/sounds/deja-vu.mp3" type="audio/mp3">
+Error loadin audio.
+</audio>
 
 <a href="https://github.com/WilsontheWolf/BuzzIn.live-Custom-Sound-Player-Userscript/raw/master/sound.user.js">Install</a>
 # Changelog
