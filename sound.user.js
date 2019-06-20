@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         BuzzIn.live Custom Sound Player
-// @version      1.0.4
+// @version      1.1.0
 // @namespace    https://buzzinlive-custom-soundbuzzer.glitch.me
 // @description  Custom sounds on BuzzIn.live!
 // @updateURL    https://github.com/WilsontheWolf/BuzzIn.live-Custom-Sound-Player-Userscript/raw/master/sound.user.js
@@ -8,6 +8,7 @@
 // @icon         https://raw.githubusercontent.com/WilsontheWolf/BuzzIn.live-Custom-Sound-Player-Userscript/master/image.png
 // @author       WilsontheWolf
 // @match        *buzzin.live/play
+// @match        *buzzin.live/host
 // @grant        none
 // ==/UserScript==
 var opttxt = ['Deafult',
@@ -68,7 +69,11 @@ function changeSound(sound) {
         src: [sound],
         rate: 1.1
     })
-    document.getElementById("mute").checked = true
+    if(document.getElementById("mute")) document.getElementById("mute").checked = true
+    else {playSound = true
+         let icon = document.getElementById("hostSoundIcon")
+         icon.classList.add("fa-check");
+        icon.classList.remove("fa-times");}
 }
 
 function customSound() {
