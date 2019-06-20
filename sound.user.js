@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         BuzzIn.live Custom Sound Player
-// @version      1.0.1
+// @version      1.0.2
 // @description  Custom sounds on BuzzIn.live!
 // @updateURL    https://github.com/WilsontheWolf/BuzzIn.live-Custom-Sound-Player-Userscript/raw/master/sound.user.js
 // @downloadURL  https://github.com/WilsontheWolf/BuzzIn.live-Custom-Sound-Player-Userscript/raw/master/sound.user.js
 // @icon         https://raw.githubusercontent.com/WilsontheWolf/BuzzIn.live-Custom-Sound-Player-Userscript/master/image.png
 // @author       WilsontheWolf
-// @match        *//buzzin.live/play
+// @match        *buzzin.live/play
 // @grant        none
 // ==/UserScript==
 var opttxt = ['Custom',
