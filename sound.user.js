@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         BuzzIn.live Custom Sound Player
-// @version      1.0.2
+// @version      1.0.3
 // @namespace    https://buzzinlive-custom-soundbuzzer.glitch.me
 // @description  Custom sounds on BuzzIn.live!
 // @updateURL    https://github.com/WilsontheWolf/BuzzIn.live-Custom-Sound-Player-Userscript/raw/master/sound.user.js
