@@ -1,4 +1,4 @@
-# BuzzIn.live Custom Sound Player Userscript<img src='https://raw.githubusercontent.com/WilsontheWolf/BuzzIn.live-Custom-Sound-Player-Userscript/master/image.png' width="42"></img>
+# BuzzIn.live Custom Sound Player Userscript<img src='https://raw.githubusercontent.com/WilsontheWolf/BuzzIn.live-Custom-Sound-Player-Userscript/master/image.png' height="25"></img>
 BuzzIn.live Custom Sound Player for buzzer. Includes a soundboard!
 
 <a href="https://github.com/WilsontheWolf/BuzzIn.live-Custom-Sound-Player-Userscript/raw/master/sound.user.js">Install</a>
