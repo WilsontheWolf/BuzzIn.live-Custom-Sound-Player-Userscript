@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         BuzzIn.live Custom Sound Player
-// @version      1.0.3
+// @version      1.0.4
 // @namespace    https://buzzinlive-custom-soundbuzzer.glitch.me
 // @description  Custom sounds on BuzzIn.live!
 // @updateURL    https://github.com/WilsontheWolf/BuzzIn.live-Custom-Sound-Player-Userscript/raw/master/sound.user.js
@@ -11,34 +11,34 @@
 // @grant        none
 // ==/UserScript==
 var opttxt = ['Deafult',
-    'Custom',
-    'Deja Vu',
-    'Dear Sister',
-    'Fus Ro Dah',
-    'GameCube Logo',
-    'Sexy Sax',
-    'Leeroy Jenkins',
-    'That was easy!',
-    'Flower Garden',
-    'Seinfeld Theme',
-    'Shooting Stars'
-]
+              'Custom',
+              'Deja Vu',
+              'Dear Sister',
+              'Fus Ro Dah',
+              'GameCube Logo',
+              'Sexy Sax',
+              'Leeroy Jenkins',
+              'That was easy!',
+              'Flower Garden',
+              'Seinfeld Theme',
+              'Shooting Stars'
+             ]
 var optval = ['buzz.mp3',
-    'custom',
-    'https://www.myinstants.com//media/sounds/deja-vu.mp3',
-    'https://www.myinstants.com/media/sounds/SNL_Digital_Short_-_Dear_Sister_1.mp3',
-    'https://www.myinstants.com/media/sounds/fus-ro-dah.mp3',
-    'https://www.myinstants.com/media/sounds/gamecube_intro.mp3',
-    'https://www.myinstants.com/media/sounds/george-micael-wham-careless-whisper-1.mp3',
-    'https://www.myinstants.com/media/sounds/leroy.swf.mp3',
-    'https://www.myinstants.com/media/sounds/that_was_easy.mp3',
-    'https://www.myinstants.com/media/sounds/flower-garden-alert.mp3',
-    'https://www.myinstants.com/media/sounds/seinfeld-theme_1.mp3',
-    'https://www.myinstants.com/media/sounds/untitled-1_qPskhfn.mp3',
-    'https://www.myinstants.com',
-    'https://www.myinstants.com',
-    'https://www.myinstants.com',
-]
+              'custom',
+              'https://www.myinstants.com//media/sounds/deja-vu.mp3',
+              'https://www.myinstants.com/media/sounds/SNL_Digital_Short_-_Dear_Sister_1.mp3',
+              'https://www.myinstants.com/media/sounds/fus-ro-dah.mp3',
+              'https://www.myinstants.com/media/sounds/gamecube_intro.mp3',
+              'https://www.myinstants.com/media/sounds/george-micael-wham-careless-whisper-1.mp3',
+              'https://www.myinstants.com/media/sounds/leroy.swf.mp3',
+              'https://www.myinstants.com/media/sounds/that_was_easy.mp3',
+              'https://www.myinstants.com/media/sounds/flower-garden-alert.mp3',
+              'https://www.myinstants.com/media/sounds/seinfeld-theme_1.mp3',
+              'https://www.myinstants.com/media/sounds/untitled-1_qPskhfn.mp3',
+              'https://www.myinstants.com',
+              'https://www.myinstants.com',
+              'https://www.myinstants.com',
+             ]
 let i
 var input = document.createElement("input");
 var button = document.createElement("input");
@@ -59,11 +59,10 @@ input.disabled = true
 document.body.appendChild(input);
 button.type = "button";
 button.value = "Apply";
-button.onclick = changeSound(input.value);
 button.setAttribute("style", "font-size:18px;position:absolute;top:30px;right:40px;");
 button.disabled = true
 document.body.appendChild(button);
-
+button.onclick = customSound
 function changeSound(sound) {
     buzzSound = new Howl({
         src: [sound],
@@ -72,7 +71,8 @@ function changeSound(sound) {
     document.getElementById("mute").checked = true
 }
 
-function customSound(sound) {
+function customSound() {
+    let sound = input.value
     changeSound(sound)
     console.log(`BuzzIn.live Custom Sound Player changed the buzzer to a custom sound (${sound})`)
 }
