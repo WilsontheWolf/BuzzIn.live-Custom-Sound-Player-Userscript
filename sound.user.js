@@ -10,8 +10,8 @@
 // @match        *buzzin.live/play
 // @grant        none
 // ==/UserScript==
-var opttxt = ['Custom',
-    'Deafult',
+var opttxt = ['Deafult',
+    'Custom',
     'Deja Vu',
     'Dear Sister',
     'Fus Ro Dah',
@@ -23,8 +23,8 @@ var opttxt = ['Custom',
     'Seinfeld Theme',
     'Shooting Stars'
 ]
-var optval = ['custom',
-    'buzz.mp3',
+var optval = ['buzz.mp3',
+    'custom',
     'https://www.myinstants.com//media/sounds/deja-vu.mp3',
     'https://www.myinstants.com/media/sounds/SNL_Digital_Short_-_Dear_Sister_1.mp3',
     'https://www.myinstants.com/media/sounds/fus-ro-dah.mp3',
@@ -55,11 +55,13 @@ document.body.appendChild(options);
 input.type = "text";
 input.value = "https://www.myinstants.com//media/sounds/deja-vu.mp3";
 input.setAttribute("style", "font-size:18px;position:absolute;top:30px;right:107px;");
+input.disabled = true
 document.body.appendChild(input);
 button.type = "button";
 button.value = "Apply";
 button.onclick = changeSound(input.value);
 button.setAttribute("style", "font-size:18px;position:absolute;top:30px;right:40px;");
+button.disabled = true
 document.body.appendChild(button);
 
 function changeSound(sound) {
